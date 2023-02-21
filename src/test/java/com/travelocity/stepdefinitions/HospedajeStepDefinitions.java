@@ -1,6 +1,6 @@
 package com.travelocity.stepdefinitions;
 
-import com.travelocity.task.SeleccionarHospedaje;
+import com.travelocity.task.SeleccionarHospedajeTask;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
@@ -12,7 +12,7 @@ public class HospedajeStepDefinitions {
 
     @Cuando("{actor} busca un hospedaje para {string}")
     public void buscarLugarParaHospedarse(Actor actor, String destino) {
-        actor.attemptsTo(SeleccionarHospedaje.simple(destino));
+        actor.attemptsTo(SeleccionarHospedajeTask.simple(destino));
     }
 
     @Entonces("{actor} debe encontrar al menos una opción disponible")
